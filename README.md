@@ -3,7 +3,8 @@
 
 # daubl
 
-<!-- badges: start --> [![Build
+<!-- badges: start --> 
+[![Build
 Status](https://travis-ci.com/pedro-teles-fonseca/daubl.svg?branch=master)](https://travis-ci.com/pedro-teles-fonseca/daubl)
 [![Codecov test
 coverage](https://codecov.io/gh/pedro-teles-fonseca/daubl/branch/master/graph/badge.svg)](https://codecov.io/gh/pedro-teles-fonseca/daubl?branch=master)
