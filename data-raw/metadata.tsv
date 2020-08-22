@@ -1,0 +1,18 @@
+No footnotes available
+
+Available flags:
+b	break in time series
+c	confidential
+d	definition differs, see metadata
+e	estimated
+f	forecast
+n	not significant
+p	provisional
+r	revised
+s	Eurostat estimate
+u	low reliability
+z	not applicable
+
+Special value:
+:	not available
+
