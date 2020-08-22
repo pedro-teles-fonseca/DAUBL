@@ -3,7 +3,7 @@ context("data")
 
 test_that("pooled sample sizes", {
   expect_true(
-    length(pooled.sample_bl1) >= length(pooled.sample_bl2)
+    length(pooled_sample_bl1) >= length(pooled_sample_bl2)
   )
 }
 )
@@ -31,7 +31,7 @@ test_that("sample sizes bl1", {
       ),
       length
     )),
-    length(pooled.sample_bl1)
+    length(pooled_sample_bl1)
   )
 }
 )
@@ -59,7 +59,7 @@ test_that("sample sizes bl2", {
       ),
       length
     )),
-    length(pooled.sample_bl2)
+    length(pooled_sample_bl2)
   )
 }
 )
