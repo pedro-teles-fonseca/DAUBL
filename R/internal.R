@@ -52,7 +52,6 @@ theta_benford <- function(d){
 }
 
 #' Multivariate Beta Function
-#' @export
 
 mbeta <- function(x){
 
@@ -60,7 +59,6 @@ mbeta <- function(x){
 }
 
 #' Multivariate log Beta Function
-#' @export
 
 lmbeta <- function(x){
 
