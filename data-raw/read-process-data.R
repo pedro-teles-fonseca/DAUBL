@@ -1,6 +1,19 @@
 
 library(usethis)
 
+data <- read.delim(
+  file = "data-raw/data-raw.tsv",
+  dec = ".",
+  na.strings = ":",
+  header = TRUE
+)
+
+data <- data.frame(lapply(data, blanks_rm))
+
+data[, 1] <- substr(data[, 1], 1, 5)
+
+country_codes <- sort(unique(data[, 1]))
+
 countries <- c(
   "austria",
   "belgium",
@@ -20,44 +33,22 @@ countries <- c(
   "spain"
 )
 
-data <- read.delim(file = "data-raw/data-raw.tsv",
-                   dec = ".",
-                   na.strings = ":",
-                   header = TRUE)
-
-data[, 1] <- substr(data[, 1], 1, 5)
-
-data <- data.frame(lapply(data, function(x) {
-  gsub(" ", "", x)
-}))
-
-country_codes <- sort(unique(data[, 1]))
-
-data_df <- data.frame(rep(0, 2646))
+data_list <- list()
 
 for(j in seq_along(countries)){
-  assign(countries[j], as.numeric(as.matrix(data[data$GEO.UNIT.SECTOR.NA_ITEM.TIME == country_codes[j], -1])))
-  data_df[[j]] <- eval(parse(text = countries[j]))
-  names(data_df)[j] <- countries[j]
+
+  data_list[[j]] <- as.numeric(unlist(data[data$GEO.UNIT.SECTOR.NA_ITEM.TIME == country_codes[j], -1]))
+  names(data_list)[j] <- countries[j]
 }
 
-for (col in seq_along(data_df)) {
-  assign(paste0(names(data_df)[col], "_bl1"), na_rm(msdigit(data_df[, col])))
-  assign(paste0(names(data_df)[col], "_bl2"), na_rm(smsdigit(data_df[, col])))
+for (col in seq_along(data_list)) {
+  assign(paste0(names(data_list)[col], "_bl1"), msdigit(na_rm(data_list[[col]])))
+  assign(paste0(names(data_list)[col], "_bl2"), smsdigit(na_rm(data_list[[col]])))
 }
 
-datalist <- list()
-
-for (c in 1:ncol(data_df)) {
-  assign(names(data_df)[c], data_df[, c])
-  datalist[[c]] <- data_df[, c]
-}
-
-pooled.sample <- do.call("c", datalist)
-pooled.sample_bl1 <- na_rm(msdigit(pooled.sample))
-pooled.sample_bl2 <- na_rm(smsdigit(pooled.sample))
-
-rm(c)
+pooled.sample <- do.call("c", data_list)
+pooled_sample_bl1 <- na_rm(msdigit(pooled.sample))
+pooled_sample_bl2 <- na_rm(smsdigit(pooled.sample))
 
 usethis::use_data(
   austria_bl1,
@@ -76,7 +67,7 @@ usethis::use_data(
   slovakia_bl1,
   slovenia_bl1,
   spain_bl1,
-  pooled.sample_bl1,
+  pooled_sample_bl1,
   austria_bl2,
   belgium_bl2,
   cyprus_bl2,
@@ -93,7 +84,7 @@ usethis::use_data(
   slovakia_bl2,
   slovenia_bl2,
   spain_bl2,
-  pooled.sample_bl2,
+  pooled_sample_bl2,
   overwrite = TRUE)
 
 
