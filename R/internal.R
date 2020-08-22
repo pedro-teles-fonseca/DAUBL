@@ -1,4 +1,8 @@
 
+blanks_rm <- function(x) {
+  gsub(" ", "", x)
+}
+
 na_rm <- function(x){
   x[!is.na(x)]
   }
