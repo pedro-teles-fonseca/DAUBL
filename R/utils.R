@@ -1,5 +1,4 @@
 
-#' @title Get the mantissae
 #' @export
 
 mantissa <- function(x){
@@ -12,7 +11,7 @@ mantissa <- function(x){
 
 #' The most significant digit for each element in the input vector
 #' @export
-#' 
+#'
 msdigit <- function(x){
 
   x <- x[x != 0]
@@ -20,7 +19,6 @@ msdigit <- function(x){
   return(x)
 }
 
-#' Returns the second most significant digit for each element in the input vector
 #' @export
 
 smsdigit <- function(x){
