@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Page not found (404) • daubl</title>
+<title>Benford's law for first and second digits — theta_benford • daubl</title>
 
 
 <!-- jquery -->
@@ -18,8 +18,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
 
 <!-- bootstrap-toc -->
-<link rel="stylesheet" href="https://pedro-teles-fonseca.github.io/daubl//bootstrap-toc.css">
-<script src="https://pedro-teles-fonseca.github.io/daubl//bootstrap-toc.js"></script>
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
@@ -33,13 +33,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
-<link href="https://pedro-teles-fonseca.github.io/daubl//pkgdown.css" rel="stylesheet">
-<script src="https://pedro-teles-fonseca.github.io/daubl//pkgdown.js"></script>
+<link href="../pkgdown.css" rel="stylesheet">
+<script src="../pkgdown.js"></script>
 
 
 
 
-<meta property="og:title" content="Page not found (404)" />
+<meta property="og:title" content="Benford's law for first and second digits — theta_benford" />
+<meta property="og:description" content="First and second digit probabilities, as postulated by Benford's law." />
 
 
 
@@ -68,7 +69,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-title-body">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -80,7 +81,7 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="https://pedro-teles-fonseca.github.io/daubl//index.html">daubl</a>
+        <a class="navbar-link" href="../index.html">daubl</a>
         <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
@@ -88,13 +89,13 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">
+  <a href="../index.html">
     <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
 <li>
-  <a href="reference/index.html">Reference</a>
+  <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -110,23 +111,74 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Page not found (404)</h1>
+    <h1>Benford's law for first and second digits</h1>
+    
+    <div class="hidden name"><code>theta_benford.Rd</code></div>
     </div>
 
-Content not found. Please use links in the navbar.
+    <div class="ref-description">
+    <p>First and second digit probabilities, as postulated by Benford's law.</p>
+    </div>
 
+    <pre class="usage"><span class='fu'>theta_benford</span>(<span class='kw'>d</span>)</pre>
+
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>d</th>
+      <td><p>Numeric vector of <a href='https://rdrr.io/r/base/length.html'>length</a> 1. Admissible values: 1 or 2.</p></td>
+    </tr>
+    </table>
+
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    
+<ul>
+<li><p><code>theta_benford(1)</code> returns a numeric vector of <a href='https://rdrr.io/r/base/length.html'>length</a> 9.</p></li>
+<li><p><code>theta_benford(2)</code> returns a numeric vector <a href='https://rdrr.io/r/base/length.html'>length</a> 10.</p></li>
+</ul>
+
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>Benford’s law is an empirical regularity regarding the occurrence of digits in numbers that was first introduced by Newcomb (1881)
+ and later popularized and supported with empirical evidence by Benford (1938)
+. The formulas that give Benford's law first and second digit probabilities can be consulted in Hill (1995)
+.</p>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Benford F (1938).
+&#8220;The law of anomalous numbers.&#8221;
+<em>Proceedings of the American Philosophical Society</em>, <b>78</b>(4).<br /><br /> Hill TP (1995).
+&#8220;A statistical derivation of the significant-digit law.&#8221;
+<em>Statistical science</em>, <b>10</b>(4), 354--363.<br /><br /> Newcomb S (1881).
+&#8220;Note on the frequency of use of the different digits in natural numbers.&#8221;
+<em>American Journal of mathematics</em>, <b>4</b>(1), 39--40.</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'>
+<ul>
+<li><p><code><a href='msdigit.html'>msdigit</a></code> to obtain the most significant digits of numbers.</p></li>
+<li><p><code><a href='smsdigit.html'>smsdigit</a></code> to obtain the second most significant digits of numbers.</p></li>
+</ul>
+</div>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>theta_benford</span>(<span class='fl'>1</span>)
+</div><div class='output co'>#&gt; [1] 0.30103000 0.17609126 0.12493874 0.09691001 0.07918125 0.06694679 0.05799195
+#&gt; [8] 0.05115252 0.04575749</div><div class='input'><span class='fu'>theta_benford</span>(<span class='fl'>2</span>)
+</div><div class='output co'>#&gt;  [1] 0.11967927 0.11389010 0.10882150 0.10432956 0.10030820 0.09667724
+#&gt;  [7] 0.09337474 0.09035199 0.08757005 0.08499735</div><div class='input'>
+</div></pre>
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
     </nav>
   </div>
-
 </div>
-
 
 
       <footer>
