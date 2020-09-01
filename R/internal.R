@@ -1,4 +1,12 @@
 
+mantissa <- function(x){
+
+  x <- abs(x)
+  e <- ifelse(x == 0, 0, floor(log10(x)))
+  m <- x / 10^e
+  round(m, 10)
+}
+
 blanks_rm <- function(x) {
   gsub(" ", "", x)
 }
@@ -12,16 +20,12 @@ substr_last <- function(x, n){
   substr(x, n_char - n + 1, n_char)
 }
 
-#' Multivariate Beta Function
-
-mbeta <- function(x){
+mbeta <- function(x){ # Multivariate Beta Function
 
   exp(sum(lgamma(x)) - lgamma(sum(x)))
 }
 
-#' Multivariate log Beta Function
-
-lmbeta <- function(x){
+lmbeta <- function(x){ # Multivariate log Beta Function
 
   sum(lgamma(x)) - lgamma(sum(x))
 }
