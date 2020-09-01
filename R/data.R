@@ -191,7 +191,6 @@
 
 "spain_bl1"
 
-
 #' @title Second digits from Austria's official statistics on government deficit, surplus and debt from 1999 to 2019.
 #'
 #' @description Second digits from Austria's official statistics on government deficit, surplus, debt and associated data from 1999 to 2019.
@@ -222,7 +221,7 @@
 #'
 #' @details Data was extracted from [Eurostat's database](https://ec.europa.eu/eurostat/data/database) in August 2020 through the directory: Database by themes -> Economy and finance -> Government statistics -> Government finance statistics -> Government deficit and debt -> Government deficit/surplus, debt and associated data. After sub-setting by country and selecting only data from 1999 to 2019, all the numbers from all the tables in this category were aggregated and then \code{\link[daubl]{smsdigit}} was used to obtain the second digits.
 #'
-#' @format A numeric vector of length 377
+#' @format A numeric vector of length 377.
 #'
 #' @source \url{https://ec.europa.eu/eurostat/data/database}
 
@@ -306,7 +305,7 @@
 #'
 #' @details Data was extracted from [Eurostat's database](https://ec.europa.eu/eurostat/data/database) in August 2020 through the directory: Database by themes -> Economy and finance -> Government statistics -> Government finance statistics -> Government deficit and debt -> Government deficit/surplus, debt and associated data. After sub-setting by country and selecting only data from 1999 to 2019, all the numbers from all the tables in this category were aggregated and then \code{\link[daubl]{smsdigit}} was used to obtain the second digits.
 #'
-#' @format A numeric vector of length 468.
+#' @format A numeric vector of length 464.
 #'
 #' @source \url{https://ec.europa.eu/eurostat/data/database}
 
@@ -318,7 +317,7 @@
 #'
 #' @details Data was extracted from [Eurostat's database](https://ec.europa.eu/eurostat/data/database) in August 2020 through the directory: Database by themes -> Economy and finance -> Government statistics -> Government finance statistics -> Government deficit and debt -> Government deficit/surplus, debt and associated data. After sub-setting by country and selecting only data from 1999 to 2019, all the numbers from all the tables in this category were aggregated and then \code{\link[daubl]{smsdigit}} was used to obtain the second digits.
 #'
-#' @format A numeric vector of length 400.
+#' @format A numeric vector of length 392.
 #'
 #' @source \url{https://ec.europa.eu/eurostat/data/database}
 
@@ -342,7 +341,7 @@
 #'
 #' @details Data was extracted from [Eurostat's database](https://ec.europa.eu/eurostat/data/database) in August 2020 through the directory: Database by themes -> Economy and finance -> Government statistics -> Government finance statistics -> Government deficit and debt -> Government deficit/surplus, debt and associated data. After sub-setting by country and selecting only data from 1999 to 2019, all the numbers from all the tables in this category were aggregated and then \code{\link[daubl]{smsdigit}} was used to obtain the second digits.
 #'
-#' @format A numeric vector of length 490.
+#' @format A numeric vector of length 488.
 #'
 #' @source \url{https://ec.europa.eu/eurostat/data/database}
 
@@ -354,7 +353,7 @@
 #'
 #' @details Data was extracted from [Eurostat's database](https://ec.europa.eu/eurostat/data/database) in August 2020 through the directory: Database by themes -> Economy and finance -> Government statistics -> Government finance statistics -> Government deficit and debt -> Government deficit/surplus, debt and associated data. After sub-setting by country and selecting only data from 1999 to 2019, all the numbers from all the tables in this category were aggregated and then \code{\link[daubl]{smsdigit}} was used to obtain the second digits.
 #'
-#' @format A numeric vector of length 385.
+#' @format A numeric vector of length 379.
 #'
 #' @source \url{https://ec.europa.eu/eurostat/data/database}
 
@@ -366,7 +365,7 @@
 #'
 #' @details Data was extracted from [Eurostat's database](https://ec.europa.eu/eurostat/data/database) in August 2020 through the directory: Database by themes -> Economy and finance -> Government statistics -> Government finance statistics -> Government deficit and debt -> Government deficit/surplus, debt and associated data. After sub-setting by country and selecting only data from 1999 to 2019, all the numbers from all the tables in this category were aggregated and then \code{\link[daubl]{smsdigit}} was used to obtain the second digits.
 #'
-#' @format A numeric vector of length 485.
+#' @format A numeric vector of length 478.
 #'
 #' @source \url{https://ec.europa.eu/eurostat/data/database}
 
