@@ -5,7 +5,7 @@
 \alias{luxembourg_bl2}
 \title{Second digits from Luxembourg's official statistics on government deficit, surplus and debt from 1999 to 2019.}
 \format{
-A numeric vector of length 468.
+A numeric vector of length 464.
 }
 \source{
 \url{https://ec.europa.eu/eurostat/data/database}

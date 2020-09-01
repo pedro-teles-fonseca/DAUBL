@@ -5,7 +5,7 @@
 \alias{slovenia_bl2}
 \title{Second digits from Slovenia's official statistics on government deficit, surplus and debt from 1999 to 2019.}
 \format{
-A numeric vector of length 485.
+A numeric vector of length 478.
 }
 \source{
 \url{https://ec.europa.eu/eurostat/data/database}
