@@ -2,16 +2,25 @@ Package: daubl
 Type: Package
 Title: Digit Analysis Using Benford's Law
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
+Authors@R: c(
+  person("Pedro", "Fonseca", email = "pedro.teles.fonseca@outlook.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-5708-081X")),
+  person("Rui", "Paulo", role = c("ctb", "ths"), comment = c(ORCID = "0000-0002-4802-527X")),
+  person(given = "FCT", role = "fnd"))
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Depends: R (>= 2.10)
+Imports: 
+  Rdpack (>= 0.7),
+  pcal (>= 1.0.0)
 Suggests: 
-    testthat,
-    covr
+    covr (>= 3.5.0),
+    knitr (>= 1.28),
+    rmarkdown (>= 2.1),
+    testthat (>= 2.3.2)
+RdMacros: Rdpack
+Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
-Depends: 
-    R (>= 2.10)
+
