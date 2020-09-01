@@ -9,6 +9,7 @@
 Status](https://travis-ci.com/pedro-teles-fonseca/daubl.svg?branch=master)](https://travis-ci.com/pedro-teles-fonseca/daubl)
 [![R build
 status](https://github.com/pedro-teles-fonseca/daubl/workflows/R-CMD-check/badge.svg)](https://github.com/pedro-teles-fonseca/daubl/actions)
+![pkgdown](https://github.com/pedro-teles-fonseca/daubl/workflows/pkgdown/badge.svg)
 [![Codecov test
 coverage](https://codecov.io/gh/pedro-teles-fonseca/daubl/branch/master/graph/badge.svg)](https://codecov.io/gh/pedro-teles-fonseca/daubl?branch=master)
 [![MIT
