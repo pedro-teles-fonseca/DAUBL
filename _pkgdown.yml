@@ -11,7 +11,7 @@ reference:
     contents:
       - '`msdigit`'
       - '`smsdigit`'
-      - '`theta_benford'
+      - '`theta_benford`'
   - title: Data
     desc: ~
     contents:
@@ -31,7 +31,6 @@ reference:
       - '`slovakia_bl1`'
       - '`slovenia_bl1`'
       - '`spain_bl1`'
-      - '`pooled_sample_bl1`'
       - '`austria_bl2`'
       - '`belgium_bl2`'
       - '`cyprus_bl2`'
@@ -48,5 +47,6 @@ reference:
       - '`slovakia_bl2`'
       - '`slovenia_bl2`'
       - '`spain_bl2`'
+      - '`pooled_sample_bl1`'
       - '`pooled_sample_bl2`'
 
