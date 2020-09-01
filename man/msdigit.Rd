@@ -2,10 +2,39 @@
 % Please edit documentation in R/utils.R
 \name{msdigit}
 \alias{msdigit}
-\title{The most significant digit for each element in the input vector}
+\title{The most significant digits of numbers}
 \usage{
 msdigit(x)
 }
+\arguments{
+\item{x}{A numeric vector or matrix.}
+}
+\value{
+\code{msdigit} returns a numeric vector with {\link[base]{length}} equal to the number of non-zero elements of \code{x} plus the number of \code{NA} values in \code{x}.
+}
 \description{
-The most significant digit for each element in the input vector
+Obtain the most significant digits of numbers in numeric vectors or matrices.
+}
+\details{
+For each non-zero, non-missing element of \code{x}, \code{msdigit} returns the first digit of that number's floating point representation of base 10. \code{NA} values in \code{x} generate \code{NA} values in the output of \code{msdigit}.
+}
+\examples{
+msdigit(451)
+msdigit(0.00451)
+msdigit(-0.00451)
+msdigit(c(-31.12, -0.23, 0.1234, 5.32))
+
+x <- c(1, 2, 3, NA)
+length(x)
+length(msdigit(x)) # equal to length(x)
+
+x <- c(0, 1, 2)
+length(x)
+length(msdigit(x)) # not equal to length(x)
+
+}
+\seealso{
+\itemize{
+\item \code{\link[daubl]{smsdigit}} to obtain the second most significant digits of numbers.
+}
 }
