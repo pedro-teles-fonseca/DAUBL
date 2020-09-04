@@ -12,9 +12,31 @@ reference:
       - '`msdigit`'
       - '`smsdigit`'
       - '`theta_benford`'
+  - title: Constants
+    desc: ~
+    contents:
+      - '`theta_bl1`'
+      - '`theta_bl2`'
   - title: Data
     desc: ~
     contents:
+      - '`austria`'
+      - '`belgium`'
+      - '`cyprus`'
+      - '`finland`'
+      - '`france`'
+      - '`germany`'
+      - '`greece`'
+      - '`ireland`'
+      - '`italy`'
+      - '`luxembourg`'
+      - '`malta`'
+      - '`netherlands`'
+      - '`portugal`'
+      - '`slovakia`'
+      - '`slovenia`'
+      - '`spain`'
+      - '`pooled_sample`'
       - '`austria_bl1`'
       - '`belgium_bl1`'
       - '`cyprus_bl1`'
@@ -31,6 +53,7 @@ reference:
       - '`slovakia_bl1`'
       - '`slovenia_bl1`'
       - '`spain_bl1`'
+      - '`pooled_sample_bl1`'
       - '`austria_bl2`'
       - '`belgium_bl2`'
       - '`cyprus_bl2`'
@@ -47,6 +70,5 @@ reference:
       - '`slovakia_bl2`'
       - '`slovenia_bl2`'
       - '`spain_bl2`'
-      - '`pooled_sample_bl1`'
       - '`pooled_sample_bl2`'
 
