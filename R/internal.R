@@ -13,7 +13,7 @@ blanks_rm <- function(x) {
 
 na_rm <- function(x){
   x[!is.na(x)]
-  }
+}
 
 substr_last <- function(x, n){
   n_char <- nchar(x)

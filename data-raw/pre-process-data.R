@@ -42,13 +42,17 @@ for(j in seq_along(countries)){
 }
 
 for (col in seq_along(data_list)) {
+  assign(names(data_list)[col], na_rm(data_list[[col]]))
   assign(paste0(names(data_list)[col], "_bl1"), msdigit(na_rm(data_list[[col]])))
   assign(paste0(names(data_list)[col], "_bl2"), smsdigit(na_rm(data_list[[col]])))
 }
 
-pooled.sample <- do.call("c", data_list)
-pooled_sample_bl1 <- na_rm(msdigit(pooled.sample))
-pooled_sample_bl2 <- na_rm(smsdigit(pooled.sample))
+pooled_sample <- na_rm(do.call("c", data_list))
+pooled_sample_bl1 <- msdigit(pooled_sample)
+pooled_sample_bl2 <- smsdigit(pooled_sample)
+
+theta_bl1 <- theta_benford(1)
+theta_bl2 <- theta_benford(2)
 
 usethis::use_data(
   austria_bl1,
@@ -85,6 +89,25 @@ usethis::use_data(
   slovenia_bl2,
   spain_bl2,
   pooled_sample_bl2,
+  austria,
+  belgium,
+  cyprus,
+  finland,
+  france,
+  germany,
+  greece,
+  ireland,
+  italy,
+  luxembourg,
+  malta,
+  netherlands,
+  portugal,
+  slovakia,
+  slovenia,
+  spain,
+  pooled_sample,
+  theta_bl1,
+  theta_bl2,
   overwrite = TRUE)
 
 
