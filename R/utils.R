@@ -106,7 +106,3 @@ benford <- function(d) {
     stop("Invalid argument: 'd' must be either 1 or 2.")
   }
 }
-
-
-
-
