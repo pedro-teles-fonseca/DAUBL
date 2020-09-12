@@ -2,4 +2,4 @@
 
 export(msdigit)
 export(smsdigit)
-export(theta_benford)
+export(benford)

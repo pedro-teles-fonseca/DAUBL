@@ -35,7 +35,7 @@ countries <- c(
 
 data_list <- list()
 
-for(j in seq_along(countries)){
+for(j in seq_along(countries)) {
 
   data_list[[j]] <- as.numeric(unlist(data[data$GEO.UNIT.SECTOR.NA_ITEM.TIME == country_codes[j], -1]))
   names(data_list)[j] <- countries[j]
@@ -51,8 +51,8 @@ pooled_sample <- na_rm(do.call("c", data_list))
 pooled_sample_bl1 <- msdigit(pooled_sample)
 pooled_sample_bl2 <- smsdigit(pooled_sample)
 
-theta_bl1 <- theta_benford(1)
-theta_bl2 <- theta_benford(2)
+theta_bl1 <- benford(1)
+theta_bl2 <- benford(2)
 
 usethis::use_data(
   austria_bl1,

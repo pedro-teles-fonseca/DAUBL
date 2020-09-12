@@ -28,7 +28,7 @@
 #'
 #' @export
 
-msdigit <- function(x){
+msdigit <- function(x) {
 
   x <- x[x != 0]
   x <- floor(mantissa(x))
@@ -64,7 +64,7 @@ msdigit <- function(x){
 #'
 #' @export
 
-smsdigit <- function(x){
+smsdigit <- function(x) {
 
   x <- x[x != 0 & (x %% 10 == 0 | mantissa(x) != floor(mantissa(x)))]
   x <- floor((mantissa(x)*10)) %% 10
@@ -80,8 +80,8 @@ smsdigit <- function(x){
 #' @details Benford’s law is an empirical regularity regarding the occurrence of digits in numbers that was first introduced by \insertCite{newcomb1881note;textual}{daubl} and later popularized and supported with empirical evidence by \insertCite{benford1938;textual}{daubl}. The formulas that give Benford's law first and second digit probabilities can be consulted in \insertCite{hill1995derivation;textual}{daubl}.
 #'
 #' @return
-#' * `theta_benford(1)` returns a numeric vector of {\link[base]{length}} 9.
-#' * `theta_benford(2)` returns a numeric vector {\link[base]{length}} 10.
+#' * `benford(1)` returns a numeric vector of {\link[base]{length}} 9.
+#' * `benford(2)` returns a numeric vector {\link[base]{length}} 10.
 #'
 #' @references
 #' \insertAllCited{}
@@ -91,17 +91,17 @@ smsdigit <- function(x){
 #' * \code{\link[daubl]{smsdigit}} to obtain the second most significant digits of numbers.
 #'
 #' @examples
-#' theta_benford(1)
-#' theta_benford(2)
+#' benford(1)
+#' benford(2)
 #'
 #' @export
 
-theta_benford <- function(d){
+benford <- function(d) {
 
-  if (d == 1){
+  if (d == 1) {
     log10(1 + 1/1:9)
-  } else if (d == 2){
-    sapply(0:9, function(x){sum(log10(1+1/(10*(1:9)+x)))})
+  } else if (d == 2) {
+    sapply(0:9, function(x) {sum(log10(1+1/(10*(1:9)+x)))})
   } else {
     stop("Invalid argument: 'd' must be either 1 or 2.")
   }
